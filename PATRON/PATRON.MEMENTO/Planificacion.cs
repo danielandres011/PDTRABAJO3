@@ -19,11 +19,11 @@ namespace PATRON.MEMENTO
         {
          return this.estado;
         }
-        public Memento createMememto()
+        public Memento crearMemento()
         {
             return new Memento(this.estado);
         }
-        public void restablecerMememto(object memento) {
+        public void restablecerMemento(object memento) {
             this.estado = ((Memento)memento).getEstado();
         }
     }

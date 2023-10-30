@@ -14,22 +14,22 @@ namespace PATRON.MEMENTO
             Stack<IMemento> planificacionHistorial = new Stack<IMemento>();
 
             planificacion.CambiarEstado("Creada");
-            planificacionHistorial.Push(planificacion.createMememto());
+            planificacionHistorial.Push(planificacion.crearMemento());
             Console.WriteLine(planificacion.getEstado());
             planificacion.CambiarEstado(" Analizada por el trabajador");
-            planificacionHistorial.Push(planificacion.createMememto());
+            planificacionHistorial.Push(planificacion.crearMemento());
             Console.WriteLine(planificacion.getEstado());
             planificacion.CambiarEstado(" Enviada para autorización");
-            planificacionHistorial.Push(planificacion.createMememto());
+            planificacionHistorial.Push(planificacion.crearMemento());
             Console.WriteLine(planificacion.getEstado());
             planificacion.CambiarEstado(" Autorizada por el supervisor");
             Console.WriteLine(planificacion.getEstado());
 
-            planificacion.restablecerMememto(planificacionHistorial.Pop());
+            planificacion.restablecerMemento(planificacionHistorial.Pop());
             Console.WriteLine(planificacion.getEstado());
-            planificacion.restablecerMememto(planificacionHistorial.Pop());
+            planificacion.restablecerMemento(planificacionHistorial.Pop());
             Console.WriteLine(planificacion.getEstado());
-            planificacion.restablecerMememto(planificacionHistorial.Pop());
+            planificacion.restablecerMemento(planificacionHistorial.Pop());
             Console.WriteLine(planificacion.getEstado());
 
             Console.ReadKey();
